@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Democr@t - Célia Popelin</title>
+    <link rel="stylesheet" href="/ressources/css/style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html">Célia Popelin</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">À propos</a></li>
+                <li><a href="../index.html#skills">Compétences</a></li>
+                <li><a href="../index.html#projects">Projets</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="project-detail">
+    <section class="project-header">
+        <div class="container">
+            <h1>Democr@t</h1>
+            <p>Plateforme de vote collaborative avec gestion des rôles</p>
+        </div>
+    </section>
+
+    <section class="project-content-detail">
+        <div class="container">
+            <h2>Description du projet</h2>
+            <p>Democr@t est une application web innovante permettant de créer des consultations démocratiques organisées. La plateforme permet de structurer des débats autour de questions organisées en sections, avec un système de vote pour déterminer les réponses les plus populaires.</p>
+
+            <p>Ce projet a été développé dans le cadre de mon BUT Informatique pour répondre à un besoin réel d'organisation de consultations collaboratives au sein d'associations et d'organisations étudiantes.</p>
+
+            <h2>Fonctionnalités principales</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🎯 Gestion des sections</h3>
+                    <p>Organisation des questions par thématiques avec une hiérarchie claire</p>
+                </div>
+                <div class="feature-card">
+                    <h3>❓ Création de questions</h3>
+                    <p>Interface intuitive pour formuler des questions précises et ciblées</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✍️ Rédaction de réponses</h3>
+                    <p>Les auteurs peuvent proposer des réponses détaillées aux questions</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🗳️ Système de vote</h3>
+                    <p>Interface de vote intuitive avec sélection des réponses préférées</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🏆 Désignation des gagnants</h3>
+                    <p>Calcul automatique des réponses les plus populaires</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👥 Gestion des rôles</h3>
+                    <p>Système de permissions avancé avec 4 types d'utilisateurs</p>
+                </div>
+            </div>
+
+            <h2>Rôles et permissions</h2>
+            <div class="roles-grid">
+                <div class="role-card">
+                    <h3>👑 Administrateur</h3>
+                    <ul>
+                        <li>Gestion complète de la plateforme</li>
+                        <li>Création et suppression des utilisateurs</li>
+                        <li>Attribution des rôles</li>
+                        <li>Modération du contenu</li>
+                    </ul>
+                </div>
+                <div class="role-card">
+                    <h3>📊 Organisateur</h3>
+                    <ul>
+                        <li>Création des sections thématiques</li>
+                        <li>Gestion des questions</li>
+                        <li>Lancement et clôture des votes</li>
+                        <li>Consultation des résultats</li>
+                    </ul>
+                </div>
+                <div class="role-card">
+                    <h3>✍️ Auteur</h3>
+                    <ul>
+                        <li>Rédaction des réponses aux questions</li>
+                        <li>Modification de ses propres contributions</li>
+                        <li>Participation aux votes</li>
+                    </ul>
+                </div>
+                <div class="role-card">
+                    <h3>🗳️ Votant</h3>
+                    <ul>
+                        <li>Consultation des questions et réponses</li>
+                        <li>Participation aux votes ouverts</li>
+                        <li>Visualisation des résultats</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Technologies utilisées</h2>
+            <div class="technologies-used">
+                <div class="tech-item">
+                    <span class="tech-icon">⚙️</span>
+                    <div>
+                        <strong>Backend</strong>
+                        <p>PHP, MySQL, Architecture MVC</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🎨</span>
+                    <div>
+                        <strong>Frontend</strong>
+                        <p>HTML5, CSS3, JavaScript, Responsive Design</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🔐</span>
+                    <div>
+                        <strong>Sécurité</strong>
+                        <p>Authentification sécurisée, Gestion des sessions, Protection CSRF</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">📊</span>
+                    <div>
+                        <strong>Base de données</strong>
+                        <p>MySQL avec relations complexes, Optimisation des requêtes</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Défis techniques relevés</h2>
+            <ul>
+                <li><strong>Architecture des rôles :</strong> Implémentation d'un système de permissions granulaire avec héritage des droits</li>
+                <li><strong>Intégrité des votes :</strong> Mise en place de mécanismes anti-fraude et vérification de l'unicité des votes</li>
+                <li><strong>Interface utilisateur :</strong> Conception d'une UX intuitive pour guider l'utilisateur selon son rôle</li>
+                <li><strong>Performance :</strong> Optimisation des requêtes SQL pour le calcul des résultats en temps réel</li>
+                <li><strong>Sécurité :</strong> Protection contre les injections SQL et sécurisation des données sensibles</li>
+            </ul>
+
+            <h2>Compétences développées</h2>
+            <div class="skills-developed">
+                <div class="skill-category">
+                    <h3>💻 Technique</h3>
+                    <p>Développement full-stack, Architecture MVC, Sécurité web, Optimisation BDD</p>
+                </div>
+                <div class="skill-category">
+                    <h3>🎯 Méthodologie</h3>
+                    <p>Gestion de projet Agile, Conception UML, Tests unitaires, Documentation technique</p>
+                </div>
+                <div class="skill-category">
+                    <h3>👥 Collaboration</h3>
+                    <p>Travail en équipe, Revue de code, Gestion de version avec Git, Communication technique</p>
+                </div>
+            </div>
+
+            <div class="project-links">
+                <a href="../index.html#projects" class="btn">Retour aux projets</a>
+                <a href="#" class="btn btn-secondary">Voir le code source</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Célia Popelin - Tous droits réservés</p>
+        <ul class="social-links">
+            <li><a href="https://www.linkedin.com/in/c%C3%A9lia-popelin-b0a38b31a/" target="_blank">LinkedIn</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>

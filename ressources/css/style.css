@@ -57,6 +57,16 @@ ul {
     transform: translateY(-2px);
 }
 
+.btn-secondary {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: #bdc3c7;
+    color: var(--primary-color);
+}
+
 section {
     padding: 80px 0;
 }
@@ -217,6 +227,48 @@ header {
     color: var(--primary-color);
 }
 
+/* Compétences */
+.competence-level {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.competence-level h4 {
+    width: 200px;
+    margin-right: 20px;
+}
+
+.level-bar {
+    flex: 1;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.level-progress {
+    height: 100%;
+    background-color: var(--secondary-color);
+    width: 0;
+    animation: fillBar 2s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Animation des barres de compétences */
+@keyframes fillBar {
+    to {
+        width: var(--target-width, 80%);
+    }
+}
+
+/* Appliquer les largeurs spécifiques pour chaque compétence */
+.level-progress[data-width="85%"] { --target-width: 85%; }
+.level-progress[data-width="80%"] { --target-width: 80%; }
+.level-progress[data-width="70%"] { --target-width: 70%; }
+.level-progress[data-width="50%"] { --target-width: 50%; }
+.level-progress[data-width="30%"] { --target-width: 30%; }
+
 /* Projects Section */
 .projects-grid {
     display: grid;
@@ -254,11 +306,44 @@ header {
 
 .project-content {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .project-content h3 {
     margin-bottom: 10px;
     color: var(--primary-color);
+}
+
+.project-content .btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+/* Technologies des projets */
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.tech-tag {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid #ddd;
+    transition: var(--transition);
+}
+
+.tech-tag:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
 }
 
 /* Contact Section */
@@ -324,47 +409,172 @@ footer {
     transform: translateY(-5px);
 }
 
-/* Compétences */
-.competence-level {
+/* Page détaillée de projet */
+.project-detail {
+    padding-top: 100px;
+}
+
+.project-header {
+    background: linear-gradient(135deg, var(--primary-color), #2980b9);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.project-header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.project-header p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+.project-content-detail {
+    background-color: white;
+    padding: 60px 0;
+}
+
+.project-content-detail h2 {
+    color: var(--primary-color);
+    margin: 40px 0 20px 0;
+    border-bottom: 2px solid var(--light-color);
+    padding-bottom: 10px;
+}
+
+.project-content-detail h2:first-child {
+    margin-top: 0;
+}
+
+/* Grille des fonctionnalités */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.feature-card {
+    background: var(--light-color);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Grille des rôles */
+.roles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.role-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--secondary-color);
+}
+
+.role-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.role-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.role-card li {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.role-card li:before {
+    content: "✓";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Technologies utilisées */
+.technologies-used {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.tech-item {
     display: flex;
     align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: var(--light-color);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.tech-item:hover {
+    transform: translateX(10px);
+}
+
+.tech-icon {
+    font-size: 2rem;
+}
+
+.tech-item strong {
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Compétences développées */
+.skills-developed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.skill-category {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.skill-category h3 {
+    color: var(--primary-color);
     margin-bottom: 15px;
 }
 
-.competence-level h4 {
-    width: 200px;
-    margin-right: 20px;
+/* Liens de projet */
+.project-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 50px;
+    flex-wrap: wrap;
 }
-
-.level-bar {
-    flex: 1;
-    height: 10px;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.level-progress {
-    height: 100%;
-    background-color: var(--secondary-color);
-    width: 0;
-    animation: fillBar 2s ease-in-out forwards;
-    animation-delay: 0.5s;
-}
-
-/* Animation des barres de compétences */
-@keyframes fillBar {
-    to {
-        width: var(--target-width, 80%);
-    }
-}
-
-/* Appliquer les largeurs spécifiques pour chaque compétence */
-.level-progress[data-width="85%"] { --target-width: 85%; }
-.level-progress[data-width="80%"] { --target-width: 80%; }
-.level-progress[data-width="70%"] { --target-width: 70%; }
-.level-progress[data-width="50%"] { --target-width: 50%; }
-.level-progress[data-width="30%"] { --target-width: 30%; }
 
 /* Animations au scroll avec CSS seulement */
 @media (prefers-reduced-motion: no-preference) {
@@ -497,6 +707,31 @@ html {
 
     .level-bar {
         width: 100%;
+    }
+
+    /* Page projet détaillée responsive */
+    .project-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .features-grid,
+    .roles-grid,
+    .skills-developed {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .project-links .btn {
+        text-align: center;
     }
 
     html {
