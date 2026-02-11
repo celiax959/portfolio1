@@ -109,6 +109,10 @@ header {
     font-weight: 700;
 }
 
+.logo a {
+    color: white;
+}
+
 .nav-links {
     display: flex;
 }
@@ -126,18 +130,21 @@ header {
     color: var(--secondary-color);
 }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 4px;
+/* Navigation active state */
+.nav-links .active {
+    color: var(--secondary-color);
+    font-weight: 600;
+    position: relative;
 }
 
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    transition: var(--transition);
+.nav-links .active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary-color);
 }
 
 /* Hero Section */
@@ -590,234 +597,148 @@ footer {
     flex-wrap: wrap;
 }
 
-/* Animations au scroll avec CSS seulement */
-@media (prefers-reduced-motion: no-preference) {
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+/* ==========================================================================
+   COMPÉTENCES PAGE
+   ========================================================================== */
 
-    /* Animation pour les éléments au scroll */
-    .skill-card, .project-card, .competence-level {
-        opacity: 0;
-        animation: fadeInUp 0.8s ease forwards;
-    }
-
-    /* Délais d'animation pour un effet cascade */
-    .skill-card:nth-child(1) {
-        animation-delay: 0.1s;
-    }
-
-    .skill-card:nth-child(2) {
-        animation-delay: 0.2s;
-    }
-
-    .skill-card:nth-child(3) {
-        animation-delay: 0.3s;
-    }
-
-    .skill-card:nth-child(4) {
-        animation-delay: 0.4s;
-    }
-
-    .skill-card:nth-child(5) {
-        animation-delay: 0.5s;
-    }
-
-    .skill-card:nth-child(6) {
-        animation-delay: 0.6s;
-    }
-
-    .project-card:nth-child(1) {
-        animation-delay: 0.1s;
-    }
-
-    .project-card:nth-child(2) {
-        animation-delay: 0.2s;
-    }
-
-    .project-card:nth-child(3) {
-        animation-delay: 0.3s;
-    }
-
-    .project-card:nth-child(4) {
-        animation-delay: 0.4s;
-    }
-
-    .project-card:nth-child(5) {
-        animation-delay: 0.5s;
-    }
-
-    .project-card:nth-child(6) {
-        animation-delay: 0.6s;
-    }
-
-    .competence-level:nth-child(1) {
-        animation-delay: 0.1s;
-    }
-
-    .competence-level:nth-child(2) {
-        animation-delay: 0.2s;
-    }
-
-    .competence-level:nth-child(3) {
-        animation-delay: 0.3s;
-    }
-
-    .competence-level:nth-child(4) {
-        animation-delay: 0.4s;
-    }
-
-    .competence-level:nth-child(5) {
-        animation-delay: 0.5s;
-    }
-
-    .competence-level:nth-child(6) {
-        animation-delay: 0.6s;
-    }
-
-    .competence-level:nth-child(7) {
-        animation-delay: 0.7s;
-    }
+/* Styles spécifiques à la page compétences */
+.competences-section {
+    padding: 6rem 0 4rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Smooth scroll */
-@media (prefers-reduced-motion: no-preference) {
-    html {
-        scroll-behavior: smooth;
-    }
+.competences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
-/* Scroll padding pour les ancres */
-html {
-    scroll-padding-top: 80px;
+.competence-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border-top: 5px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
-/* Menu hamburger en CSS pur */
-#menu-toggle {
-    display: none;
+.competence-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--primary-color);
-        flex-direction: column;
-        padding: 20px 0;
-        text-align: center;
-        transform: translateY(-100%);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-    }
-
-    #menu-toggle:checked ~ .nav-links {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .hamburger {
-        display: flex;
-        position: relative;
-        z-index: 1001;
-    }
-
-    /* Animation hamburger */
-    #menu-toggle:checked + .hamburger span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-
-    #menu-toggle:checked + .hamburger span:nth-child(2) {
-        opacity: 0;
-    }
-
-    #menu-toggle:checked + .hamburger span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content p {
-        font-size: 1.2rem;
-    }
-
-    .about-content {
-        flex-direction: column;
-    }
-
-    .competence-level {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .competence-level h4 {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .level-bar {
-        width: 100%;
-    }
-
-    /* Page projet détaillée responsive */
-    .project-header h1 {
-        font-size: 2.2rem;
-    }
-
-    .features-grid,
-    .roles-grid,
-    .skills-developed {
-        grid-template-columns: 1fr;
-    }
-
-    .tech-item {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .project-links {
-        flex-direction: column;
-    }
-
-    .project-links .btn {
-        text-align: center;
-    }
-
-    html {
-        scroll-padding-top: 60px;
-    }
+/* Couleurs des bordures selon le niveau */
+.competence-jaune {
+    border-top-color: #FFD700;
+    border-left: 4px solid #FFD700;
 }
 
-/* Support pour la préférence de mouvement réduit */
-@media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
+.competence-verte {
+    border-top-color: #28a745;
+    border-left: 4px solid #28a745;
+}
 
-    html {
-        scroll-behavior: auto;
-    }
+.competence-bleue {
+    border-top-color: var(--secondary-color);
+    border-left: 4px solid var(--secondary-color);
+}
+
+/* Badge de statut */
+.competence-status {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.competence-jaune .competence-status {
+    background-color: #FFD700;
+    color: #333;
+}
+
+.competence-verte .competence-status {
+    background-color: #28a745;
+}
+
+.competence-bleue .competence-status {
+    background-color: var(--secondary-color);
+}
+
+/* Titre et description */
+.competence-title {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.competence-description {
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Légende des compétences */
+.competence-legend {
+    margin-top: 4rem;
+    padding: 1.5rem;
+    background: var(--light-color);
+    border-radius: 10px;
+    border-left: 4px solid #6c757d;
+}
+
+.legend-title {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.legend-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.legend-color.jaune {
+    background-color: #FFD700;
+}
+
+.legend-color.verte {
+    background-color: #28a745;
+}
+
+.legend-color.bleue {
+    background-color: var(--secondary-color);
+}
+
+.legend-text {
+    color: var(--text-color);
+    font-size: 0.95rem;
 }
 
 /* Timeline / Parcours scolaire */
@@ -938,8 +859,140 @@ html {
     line-height: 1.6;
 }
 
-/* Responsive pour la timeline */
+/* Animations au scroll avec CSS seulement */
+@media (prefers-reduced-motion: no-preference) {
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Animation pour les éléments au scroll */
+    .skill-card, .project-card, .competence-level,
+    .timeline-item, .interest-card, .competence-card {
+        opacity: 0;
+        animation: fadeInUp 0.8s ease forwards;
+    }
+
+    /* Délais d'animation pour un effet cascade */
+    .skill-card:nth-child(1) { animation-delay: 0.1s; }
+    .skill-card:nth-child(2) { animation-delay: 0.2s; }
+    .skill-card:nth-child(3) { animation-delay: 0.3s; }
+    .skill-card:nth-child(4) { animation-delay: 0.4s; }
+    .skill-card:nth-child(5) { animation-delay: 0.5s; }
+    .skill-card:nth-child(6) { animation-delay: 0.6s; }
+
+    .project-card:nth-child(1) { animation-delay: 0.1s; }
+    .project-card:nth-child(2) { animation-delay: 0.2s; }
+    .project-card:nth-child(3) { animation-delay: 0.3s; }
+    .project-card:nth-child(4) { animation-delay: 0.4s; }
+    .project-card:nth-child(5) { animation-delay: 0.5s; }
+    .project-card:nth-child(6) { animation-delay: 0.6s; }
+
+    .competence-level:nth-child(1) { animation-delay: 0.1s; }
+    .competence-level:nth-child(2) { animation-delay: 0.2s; }
+    .competence-level:nth-child(3) { animation-delay: 0.3s; }
+    .competence-level:nth-child(4) { animation-delay: 0.4s; }
+    .competence-level:nth-child(5) { animation-delay: 0.5s; }
+    .competence-level:nth-child(6) { animation-delay: 0.6s; }
+    .competence-level:nth-child(7) { animation-delay: 0.7s; }
+
+    .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+    .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+    .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+    .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+
+    .interest-card:nth-child(1) { animation-delay: 0.1s; }
+    .interest-card:nth-child(2) { animation-delay: 0.2s; }
+    .interest-card:nth-child(3) { animation-delay: 0.3s; }
+    .interest-card:nth-child(4) { animation-delay: 0.4s; }
+    .interest-card:nth-child(5) { animation-delay: 0.5s; }
+    .interest-card:nth-child(6) { animation-delay: 0.6s; }
+
+    .competence-card:nth-child(1) { animation-delay: 0.1s; }
+    .competence-card:nth-child(2) { animation-delay: 0.2s; }
+    .competence-card:nth-child(3) { animation-delay: 0.3s; }
+    .competence-card:nth-child(4) { animation-delay: 0.4s; }
+    .competence-card:nth-child(5) { animation-delay: 0.5s; }
+    .competence-card:nth-child(6) { animation-delay: 0.6s; }
+}
+
+/* Smooth scroll */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Scroll padding pour les ancres */
+html {
+    scroll-padding-top: 80px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .competence-level {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .competence-level h4 {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .level-bar {
+        width: 100%;
+    }
+
+    /* Page projet détaillée responsive */
+    .project-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .features-grid,
+    .roles-grid,
+    .skills-developed {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .project-links .btn {
+        text-align: center;
+    }
+
+    /* Responsive pour la timeline */
     .timeline::before {
         left: 30px;
     }
@@ -967,52 +1020,44 @@ html {
     .interests-grid {
         grid-template-columns: 1fr;
     }
+
+    /* Responsive - Compétences */
+    .competences-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .competences-section {
+        padding: 4rem 0 2rem 0;
+    }
+
+    .legend-items {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .competence-card {
+        padding: 1.2rem;
+    }
+
+    .competence-title {
+        font-size: 1.1rem;
+    }
+
+    html {
+        scroll-padding-top: 60px;
+    }
 }
 
-/* Animation pour les nouvelles sections */
-@media (prefers-reduced-motion: no-preference) {
-    .timeline-item, .interest-card {
-        opacity: 0;
-        animation: fadeInUp 0.8s ease forwards;
+/* Support pour la préférence de mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 
-    .timeline-item:nth-child(1) {
-        animation-delay: 0.1s;
-    }
-
-    .timeline-item:nth-child(2) {
-        animation-delay: 0.2s;
-    }
-
-    .timeline-item:nth-child(3) {
-        animation-delay: 0.3s;
-    }
-
-    .timeline-item:nth-child(4) {
-        animation-delay: 0.4s;
-    }
-
-    .interest-card:nth-child(1) {
-        animation-delay: 0.1s;
-    }
-
-    .interest-card:nth-child(2) {
-        animation-delay: 0.2s;
-    }
-
-    .interest-card:nth-child(3) {
-        animation-delay: 0.3s;
-    }
-
-    .interest-card:nth-child(4) {
-        animation-delay: 0.4s;
-    }
-
-    .interest-card:nth-child(5) {
-        animation-delay: 0.5s;
-    }
-
-    .interest-card:nth-child(6) {
-        animation-delay: 0.6s;
+    html {
+        scroll-behavior: auto;
     }
 }
