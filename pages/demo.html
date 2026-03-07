@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Democr@t - Célia Popelin</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../ressources/img/c.jpg">
     <link rel="stylesheet" href="../ressources/css/style.css">
 </head>
 <body>
@@ -17,10 +18,10 @@
                 <li><a href="../index.html#about">À propos</a></li>
                 <li><a href="../index.html#parcours">Parcours</a></li>
                 <li><a href="../index.html#interests">Projets futurs</a></li>
-                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="parcours1.html">Portfolio d'apprentissage</a></li>
                 <li><a href="../index.html#projects">Projets</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
-                <li><a href="../ressources/fichier/CV_POPELIN_CELIA.pdf" download> Télécharger mon CV</a></li>
+                <li><a href="../ressources/fichier/CV_POPELIN_CELIA.pdf" download>Télécharger mon CV</a></li>
             </ul>
         </nav>
     </div>
@@ -37,8 +38,7 @@
     <section class="project-content-detail">
         <div class="container">
             <h2>Description du projet</h2>
-            <p>Democr@t est une application web innovante permettant de créer des consultations démocratiques organisées. La plateforme permet de structurer des débats autour de questions organisées en sections, avec un système de vote pour déterminer les réponses les plus populaires.</p>
-
+            <p>Democr@t est une application web permettant de créer des consultations démocratiques organisées. La plateforme structure des débats autour de questions organisées en sections, avec un système de vote pour déterminer les réponses les plus populaires.</p>
             <p>Ce projet a été développé dans le cadre de mon BUT Informatique pour répondre à un besoin réel d'organisation de consultations collaboratives au sein d'associations et d'organisations étudiantes.</p>
 
             <h2>Fonctionnalités principales</h2>
@@ -86,7 +86,7 @@
                         <li>Création des sections thématiques</li>
                         <li>Gestion des questions</li>
                         <li>Lancement et clôture des votes</li>
-                        <li>Gestion des auteurs et votants sur sa question</li>
+                        <li>Gestion des auteurs et votants</li>
                     </ul>
                 </div>
                 <div class="role-card">
@@ -109,28 +109,28 @@
             <h2>Technologies utilisées</h2>
             <div class="technologies-used">
                 <div class="tech-item">
-                    <span class="tech-icon"></span>
+                    <span class="tech-icon">🖥️</span>
                     <div>
                         <strong>Backend</strong>
                         <p>PHP, MySQL, Architecture MVC</p>
                     </div>
                 </div>
                 <div class="tech-item">
-                    <span class="tech-icon"></span>
+                    <span class="tech-icon">🎨</span>
                     <div>
                         <strong>Frontend</strong>
                         <p>HTML5, CSS3 avec le framework BULMA, Responsive Design</p>
                     </div>
                 </div>
                 <div class="tech-item">
-                    <span class="tech-icon"></span>
+                    <span class="tech-icon">🔒</span>
                     <div>
                         <strong>Sécurité</strong>
                         <p>Authentification sécurisée, Gestion des sessions</p>
                     </div>
                 </div>
                 <div class="tech-item">
-                    <span class="tech-icon"></span>
+                    <span class="tech-icon">🗄️</span>
                     <div>
                         <strong>Base de données</strong>
                         <p>MySQL avec relations complexes, Optimisation des requêtes</p>
@@ -141,9 +141,9 @@
             <h2>Défis techniques relevés</h2>
             <ul>
                 <li><strong>Architecture des rôles :</strong> Implémentation d'un système de permissions granulaire avec héritage des droits</li>
-                <li><strong>Intégrité des votes :</strong> Mise en place de mécanismes anti-fraude et vérification de l'unicité des votes</li>
-                <li><strong>Interface utilisateur :</strong> Conception d'une UX intuitive pour guider l'utilisateur selon son rôle</li>
-                <li><strong>Performance :</strong> Optimisation des requêtes SQL pour le calcul des résultats en temps réel</li>
+                <li><strong>Intégrité des votes :</strong> Mécanismes anti-fraude et vérification de l'unicité des votes</li>
+                <li><strong>Interface utilisateur :</strong> UX intuitive adaptée à chaque rôle</li>
+                <li><strong>Performance :</strong> Optimisation des requêtes SQL pour les résultats en temps réel</li>
                 <li><strong>Sécurité :</strong> Protection contre les injections SQL et sécurisation des données sensibles</li>
             </ul>
 
@@ -159,13 +159,19 @@
                 </div>
                 <div class="skill-category">
                     <h3>Collaboration</h3>
-                    <p>Travail en équipe, Revue de code, Gestion de version avec Git, Communication technique</p>
+                    <p>Travail en équipe, Revue de code, Git, Communication technique</p>
                 </div>
+            </div>
+
+            <h2>Aperçu du projet</h2>
+            <div class="project-screenshots">
+                <img src="../ressources/img/accueil.png" alt="Page d'accueil de Democr@t" loading="lazy">
+                <img src="../ressources/img/connecté.png" alt="Interface connectée de Democr@t" loading="lazy">
+                <img src="../ressources/img/terminé.png" alt="Vue des résultats de vote" loading="lazy">
             </div>
 
             <div class="project-links">
                 <a href="../index.html#projects" class="btn">Retour aux projets</a>
-                <a href="https://webinfo.iutmontp.univ-montp2.fr/~larcherc/democr@/web/controleurFrontal.php" class="btn btn-secondary" target="_blank"> Voir le code source</a>
             </div>
         </div>
     </section>
@@ -176,10 +182,9 @@
         <p>&copy; 2026 Célia Popelin - Tous droits réservés</p>
         <ul class="social-links">
             <li><a href="https://www.linkedin.com/in/c%C3%A9lia-popelin-b0a38b31a/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/celiax959" target="_blank">GitHub </a></li>
+            <li><a href="https://github.com/celiax959" target="_blank">GitHub</a></li>
         </ul>
     </div>
 </footer>
-
 </body>
 </html>
