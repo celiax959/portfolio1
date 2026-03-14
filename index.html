@@ -7,6 +7,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="ressources/img/c.jpg">
     <link rel="stylesheet" href="ressources/css/style.css">
 </head>
+<script>
+    document.querySelectorAll('.skill-bubble').forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+            btn.style.animation = 'none';
+            void btn.offsetWidth;
+            btn.style.animation = '';
+        });
+    });
+</script>
 <body>
 <!-- Header -->
 <header>
@@ -98,60 +107,60 @@
     </section>
 
     <!-- Centres d'intérêt et projets futurs -->
-<!--    <section id="interests" class="interests">-->
-<!--        <div class="container">-->
-<!--            <h2 class="section-title">Centres d'intérêt & Projets futurs</h2>-->
-<!--            <div class="interests-grid">-->
-<!--                <div class="interest-card">-->
-<!--                    <div class="interest-icon">-->
-<!--                        <span>🎮</span>-->
-<!--                    </div>-->
-<!--                    <h3>Jeux vidéo</h3>-->
-<!--                    <p>Passionnée par l'univers du gaming depuis l'enfance. J'apprécie particulièrement les jeux de-->
-<!--                        stratégie et les RPG qui stimulent la réflexion et la créativité.</p>-->
-<!--                </div>-->
-<!--                <div class="interest-card">-->
-<!--                    <div class="interest-icon">-->
-<!--                        <span>🎵</span>-->
-<!--                    </div>-->
-<!--                    <h3>La musique</h3>-->
-<!--                    <p>La musique rythme mon quotidien. J'apprends actuellement la guitare en autodidacte.</p>-->
-<!--                </div>-->
-<!--                <div class="interest-card">-->
-<!--                    <div class="interest-icon">-->
-<!--                        <span>🌐</span>-->
-<!--                    </div>-->
-<!--                    <h3>Développement Web </h3>-->
-<!--                    <p>Je veux approfondir mes connaissances en développement full-stack et explorer les technologies-->
-<!--                        modernes comme React et le développement d'applications web.</p>-->
-<!--                </div>-->
-<!--                <div class="interest-card">-->
-<!--                    <div class="interest-icon">-->
-<!--                        <span>🎓</span>-->
-<!--                    </div>-->
-<!--                    <h3>Après le BUT</h3>-->
-<!--                    <p>Je souhaite poursuivre en master spécialisé en développement web ou en alternance pour acquérir-->
-<!--                        une expérience professionnelle significative tout en continuant à me former.</p>-->
-<!--                </div>-->
-<!--                <div class="interest-card">-->
-<!--                    <div class="interest-icon">-->
-<!--                        <span>🤝</span>-->
-<!--                    </div>-->
-<!--                    <h3>Travail en équipe</h3>-->
-<!--                    <p>J'apprécie particulièrement le travail collaboratif et souhaite intégrer une équipe dynamique où-->
-<!--                        je pourrai contribuer à des projets ambitieux et innovants.</p>-->
-<!--                </div>-->
-<!--                <div class="interest-card">-->
-<!--                    <div class="interest-icon">-->
-<!--                        <span>🚀</span>-->
-<!--                    </div>-->
-<!--                    <h3>Objectif professionnel</h3>-->
-<!--                    <p>À terme, je souhaite devenir développeuse full-stack ou spécialiste en développement web, dans-->
-<!--                        une entreprise qui valorise l'innovation et l'apprentissage continu.</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
+    <!--    <section id="interests" class="interests">-->
+    <!--        <div class="container">-->
+    <!--            <h2 class="section-title">Centres d'intérêt & Projets futurs</h2>-->
+    <!--            <div class="interests-grid">-->
+    <!--                <div class="interest-card">-->
+    <!--                    <div class="interest-icon">-->
+    <!--                        <span>🎮</span>-->
+    <!--                    </div>-->
+    <!--                    <h3>Jeux vidéo</h3>-->
+    <!--                    <p>Passionnée par l'univers du gaming depuis l'enfance. J'apprécie particulièrement les jeux de-->
+    <!--                        stratégie et les RPG qui stimulent la réflexion et la créativité.</p>-->
+    <!--                </div>-->
+    <!--                <div class="interest-card">-->
+    <!--                    <div class="interest-icon">-->
+    <!--                        <span>🎵</span>-->
+    <!--                    </div>-->
+    <!--                    <h3>La musique</h3>-->
+    <!--                    <p>La musique rythme mon quotidien. J'apprends actuellement la guitare en autodidacte.</p>-->
+    <!--                </div>-->
+    <!--                <div class="interest-card">-->
+    <!--                    <div class="interest-icon">-->
+    <!--                        <span>🌐</span>-->
+    <!--                    </div>-->
+    <!--                    <h3>Développement Web </h3>-->
+    <!--                    <p>Je veux approfondir mes connaissances en développement full-stack et explorer les technologies-->
+    <!--                        modernes comme React et le développement d'applications web.</p>-->
+    <!--                </div>-->
+    <!--                <div class="interest-card">-->
+    <!--                    <div class="interest-icon">-->
+    <!--                        <span>🎓</span>-->
+    <!--                    </div>-->
+    <!--                    <h3>Après le BUT</h3>-->
+    <!--                    <p>Je souhaite poursuivre en master spécialisé en développement web ou en alternance pour acquérir-->
+    <!--                        une expérience professionnelle significative tout en continuant à me former.</p>-->
+    <!--                </div>-->
+    <!--                <div class="interest-card">-->
+    <!--                    <div class="interest-icon">-->
+    <!--                        <span>🤝</span>-->
+    <!--                    </div>-->
+    <!--                    <h3>Travail en équipe</h3>-->
+    <!--                    <p>J'apprécie particulièrement le travail collaboratif et souhaite intégrer une équipe dynamique où-->
+    <!--                        je pourrai contribuer à des projets ambitieux et innovants.</p>-->
+    <!--                </div>-->
+    <!--                <div class="interest-card">-->
+    <!--                    <div class="interest-icon">-->
+    <!--                        <span>🚀</span>-->
+    <!--                    </div>-->
+    <!--                    <h3>Objectif professionnel</h3>-->
+    <!--                    <p>À terme, je souhaite devenir développeuse full-stack ou spécialiste en développement web, dans-->
+    <!--                        une entreprise qui valorise l'innovation et l'apprentissage continu.</p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
 
 
     <!-- Projets -->
@@ -239,87 +248,25 @@
     <!-- Compétences -->
     <section id="skills" class="skills">
         <div class="container">
-            <!--            <h2 class="section-title">Mes compétences</h2>-->
-            <!--            <div class="skills-grid">-->
-            <!--                <div class="skill-card">-->
-            <!--                    <h3>Compétence 1: Réaliser un développement d'application</h3>-->
-            <!--                    <p>Compétence en acquise. Je suis capable de réaliser des applications avec une aide ponctuelle.</p>-->
-            <!--                </div>-->
-            <!--                <div class="skill-card">-->
-            <!--                    <h3>Compétence 2: Optimiser des applications</h3>-->
-            <!--                    <p>Compétence acquise. Je suis capable de réaliser le travail demandé avec une aide ponctuelle.</p>-->
-            <!--                </div>-->
-            <!--                <div class="skill-card">-->
-            <!--                    <h3>Compétence 3: Administrer des systèmes informatiques communicants complexes</h3>-->
-            <!--                    <p>Compétence en cours d'acquisition. Je continue à développer mes capacités pour gérer des réseaux informatiques et construire une machine virtuelle complète.</p>-->
-            <!--                </div>-->
-            <!--                <div class="skill-card">-->
-            <!--                    <h3>Compétence 4: Gérer des données de l'information</h3>-->
-            <!--                    <p>Compétence acquise. Je suis capable de réaliser le travail demandé avec une aide ponctuelle.</p>-->
-            <!--                </div>-->
-            <!--                <div class="skill-card">-->
-            <!--                    <h3>Compétence 5: Conduire un projet</h3>-->
-            <!--                    <p>Compétence acquise au-delà des attendus. Je gère efficacement la gestion des projets et la coordination de l'équipe.</p>-->
-            <!--                </div>-->
-            <!--                <div class="skill-card">-->
-            <!--                    <h3>Compétence 6: Collaborer au sein d'une équipe informatique</h3>-->
-            <!--                    <p>Compétence acquise au-delà des attendus. Je communique avec aisance et efficacité au sein des groupes.</p>-->
-            <!--                </div>-->
-            <!--            </div>-->
-
             <h3 class="section-title" style="margin-top: 80px;">Compétences en programmation</h3>
-            <div class="competence-level">
-                <h4>HTML5</h4>
-                <div class="level-bar">
-                    <div class="level-progress" data-width="85%"></div>
-                </div>
+            <div class="skills-bubbles">
+                <button class="skill-bubble">HTML5</button>
+                <button class="skill-bubble">CSS3</button>
+                <button class="skill-bubble">PHP</button>
+                <button class="skill-bubble">Java</button>
+                <button class="skill-bubble">JavaFX</button>
+                <button class="skill-bubble">C</button>
+                <button class="skill-bubble">MySQL</button>
+                <button class="skill-bubble">Python</button>
+                <button class="skill-bubble">JavaScript</button>
+                <button class="skill-bubble">Git</button>
+                <button class="skill-bubble">Gestion de Projets</button>
+                <button class="skill-bubble">Bulma</button>
+                <button class="skill-bubble">Docker</button>
+                <button class="skill-bubble">Figma</button>
+                <button class="skill-bubble">React</button>
+                <button class="skill-bubble">JSON</button>
             </div>
-            <div class="competence-level">
-                <h4>CSS3</h4>
-                <div class="level-bar">
-                    <div class="level-progress" data-width="85%"></div>
-                </div>
-            </div>
-            <div class="competence-level">
-                <h4>PHP</h4>
-                <div class="level-bar">
-                    <div class="level-progress" data-width="80%"></div>
-                </div>
-            </div>
-            <div class="competence-level">
-                <h4>JAVA</h4>
-                <div class="level-bar">
-                    <div class="level-progress" data-width="70%"></div>
-                </div>
-            </div>
-            <div class="competence-level">
-                <h4>JavaFX</h4>
-                <div class="level-bar">
-                    <div class="level-progress" data-width="50%"></div>
-                </div>
-            </div>
-            <div class="competence-level">
-                <h4>C</h4>
-                <div class="level-bar">
-                    <div class="level-progress" data-width="30%"></div>
-                </div>
-            </div>
-            <div class="competence-level">
-                <h4>MySQL</h4>
-                <div class="level-bar">
-                    <div class="level-progress" data-width="70%"></div>
-                </div>
-            </div>
-            <h4>Python</h4>
-            <h4>JavaScript</h4>
-            <h4>Git</h4>
-            <h4>Gestion de Projets</h4>
-            <h4>Bulma</h4>
-            <h4>Docker</h4>
-            <h4>Figma</h4>
-            <h4>React</h4>
-            <h4>Json</h4>
-
         </div>
     </section>
 
