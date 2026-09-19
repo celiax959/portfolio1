@@ -28,7 +28,7 @@
 <main class="project-detail">
     <section class="project-header">
         <div class="container">
-            <h1>Stage chez EDF</h1>
+            <h1>Stage chez EDF — Portail opérateur DeployIT</h1>
             <p>Modernisation et automatisation du processus de masterisation d'un poste de travail</p>
         </div>
     </section>
@@ -36,63 +36,58 @@
     <section class="project-content-detail">
         <div class="container">
             <h2>Description du projet</h2>
-            <p>Le projet consistait à créer une application web interne afin d'automatiser la création d'un poste de travail pour les employés de EDF</p>
+            <p>Stage de 3 mois réalisé au sein de la direction Informatique et Télécoms d'EDF, dans une équipe chargée de préparer, déployer et administrer les postes de travail du groupe. Le processus de masterisation reposait alors sur un enchaînement d'outils manuels, avec une double saisie d'informations source d'erreurs et aucune traçabilité centralisée des déploiements.</p>
+            <p>Face à l'obsolescence programmée de l'infrastructure existante, un projet de modernisation a été lancé pour automatiser ce processus via des playbooks Ansible. L'outil définitif étant encore en développement, ma mission a consisté à concevoir un <strong>portail opérateur</strong> : une interface indépendante permettant à l'équipe de tester et de valider ces automatisations avant leur mise en production, sans attendre la livraison de l'outil cible.</p>
 
             <h2>Fonctionnalités principales</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <h3>M de jeu</h3>
-                    <p>Implémentation complète des règles du 421 avec trois dés</p>
+                    <h3>Tableau de bord</h3>
+                    <p>Suivi des demandes de poste ouvertes et fermées en un coup d'œil</p>
                 </div>
                 <div class="feature-card">
-                    <h3>Intelligence Artificielle</h3>
-                    <p>IA capable de jouer de manière autonome avec stratégie</p>
+                    <h3>Formulaire de demande</h3>
+                    <p>Saisie à partir d'un ticket existant ou en mode libre pour tester des scénarios</p>
                 </div>
                 <div class="feature-card">
-                    <h3>Tests unitaires</h3>
-                    <p>Validation progressive des fonctionnalités avec tests automatisés</p>
+                    <h3>Affichage conditionnel</h3>
+                    <p>Champs techniques adaptés dynamiquement selon le type de demande</p>
                 </div>
                 <div class="feature-card">
-                    <h3>Algorithmes avancés</h3>
-                    <p>Réflexions mathématiques pour optimiser l'IA</p>
+                    <h3>Fiche de suivi</h3>
+                    <p>Génération et export PDF de la fiche de déploiement</p>
                 </div>
                 <div class="feature-card">
-                    <h3>Architecture POO</h3>
-                    <p>Structure modulaire et extensible en programmation orientée objet</p>
+                    <h3>Matrice du matériel</h3>
+                    <p>Référentiel des configurations matérielles disponibles</p>
                 </div>
                 <div class="feature-card">
-                    <h3>Gestion des tours</h3>
-                    <p>Système de jeu tour par tour avec 1 à 3 lancers par tour</p>
+                    <h3>Gestion des rôles</h3>
+                    <p>Trois niveaux d'accès : technicien, technicien N2, administrateur</p>
                 </div>
             </div>
 
-            <h2>Déroulement des livrables</h2>
+            <h2>Profils utilisateurs</h2>
             <div class="roles-grid">
                 <div class="role-card">
-                    <h3>Livrable 1</h3>
+                    <h3>Technicien</h3>
                     <ul>
-                        <li>Bases du jeu avec squelette de code fourni</li>
-                        <li>Implémentation progressive des fonctions</li>
-                        <li>Validation par tests unitaires</li>
-                        <li>Trois extensions fonctionnelles</li>
+                        <li>Lance un déploiement à partir d'un ticket</li>
+                        <li>Limite les manipulations manuelles</li>
                     </ul>
                 </div>
                 <div class="role-card">
-                    <h3>Livrable 2</h3>
+                    <h3>Technicien N2</h3>
                     <ul>
-                        <li>Amélioration du jeu avec IA basique</li>
-                        <li>Introduction à la programmation orientée objet</li>
-                        <li>Réflexions mathématiques pour l'IA</li>
-                        <li>Trois nouvelles extensions</li>
+                        <li>Génère une fiche de test hors circuit standard</li>
+                        <li>Valide ses automatisations de manière isolée</li>
                     </ul>
                 </div>
                 <div class="role-card">
-                    <h3>Livrable 3</h3>
+                    <h3>Administrateur</h3>
                     <ul>
-                        <li>IA avancée avec stratégies complexes</li>
-                        <li>POO avancée et design patterns</li>
-                        <li>Optimisation des algorithmes</li>
-                        <li>Extensions finales et optimisation</li>
+                        <li>Dispose d'une interface de secours en cas d'indisponibilité</li>
+                        <li>Supervise l'ensemble des déploiements</li>
                     </ul>
                 </div>
             </div>
@@ -100,57 +95,64 @@
             <h2>Technologies utilisées</h2>
             <div class="technologies-used">
                 <div class="tech-item">
-                    <span class="tech-icon"></span>
+                    <span class="tech-icon">🖥️</span>
                     <div>
-                        <strong>Langage</strong>
-                        <p>PHP avec architecture MVC</p>
+                        <strong>Backend</strong>
+                        <p>PHP, architecture MVC, appels API REST</p>
                     </div>
                 </div>
                 <div class="tech-item">
-                    <span class="tech-icon"></span>
+                    <span class="tech-icon">🎨</span>
                     <div>
-                        <strong></strong>
-                        <p></p>
+                        <strong>Frontend</strong>
+                        <p>HTML5, CSS3, JavaScript</p>
                     </div>
                 </div>
                 <div class="tech-item">
-                    <span class="tech-icon"></span>
+                    <span class="tech-icon">🗄️</span>
                     <div>
-                        <strong></strong>
-                        <p></p>
+                        <strong>Base de données</strong>
+                        <p>PostgreSQL</p>
                     </div>
                 </div>
                 <div class="tech-item">
-                    <span class="tech-icon"></span>
+                    <span class="tech-icon">⚙️</span>
                     <div>
-                        <strong></strong>
-                        <p></p>
+                        <strong>Automatisation & outils</strong>
+                        <p>Ansible Automation Platform, Docker, GitLab, maquettage Figma</p>
                     </div>
                 </div>
             </div>
 
             <h2>Défis techniques relevés</h2>
             <ul>
-                <li><strong>Algorithmie :</strong> Développement d'algorithmes de jeu optimisés pour l'IA</li>
-                <li><strong>POO :</strong> Maîtrise des concepts avancés de programmation orientée objet</li>
-                <li><strong>Probabilités :</strong> Implémentation de calculs mathématiques pour l'IA</li>
-                <li><strong>Architecture :</strong> Conception d'une structure modulaire et maintenable</li>
-                <li><strong>Collaboration :</strong> Travail efficace en binôme avec coordination des développements</li>
+                <li><strong>Données sources non documentées :</strong> face à des jeux de données internes peu exploitables, j'ai analysé les échanges réseau du navigateur puis reproduit ces appels en PHP via cURL pour adapter le portail aux données réellement disponibles</li>
+                <li><strong>Découverte d'Ansible :</strong> montée en compétence en autonomie sur les notions d'inventaires, de groupes d'hôtes et de nœuds d'exécution, via la documentation officielle et l'accompagnement de mon tuteur</li>
+                <li><strong>Conception avant développement :</strong> réalisation de maquettes Figma et validation du parcours utilisateur avec l'équipe avant toute implémentation</li>
+                <li><strong>Intégration dans un existant complexe :</strong> connexion du portail à un système de tickets et à une plateforme d'automatisation Ansible interne déjà en place</li>
+            </ul>
+
+            <h2>Résultats</h2>
+            <ul>
+                <li>Formulaires et affichage validés par des scénarios de saisie couvrant les cas d'usage prévus</li>
+                <li>Fiabilité des données vérifiée par comparaison avec la plateforme source</li>
+                <li>Playbooks Ansible exécutés et validés en environnement de préproduction</li>
+                <li>Démonstrations régulières à l'équipe projet, avec ajustements de l'ergonomie suite aux retours</li>
             </ul>
 
             <h2>Compétences développées</h2>
             <div class="skills-developed">
                 <div class="skill-category">
-                    <h3>Développement Java</h3>
-                    <p>POO avancée, Algorithmes, Tests unitaires, Architecture</p>
+                    <h3>Développement web</h3>
+                    <p>PHP, architecture MVC, API REST, PostgreSQL</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Intelligence Artificielle</h3>
-                    <p>Algorithmes de décision, Probabilités, Stratégies de jeu</p>
+                    <h3>Automatisation</h3>
+                    <p>Ansible, infrastructure as code, environnements de préproduction</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Collaboration</h3>
-                    <p>Travail en binôme, Gestion de version, Communication technique</p>
+                    <h3>Méthodologie & collaboration</h3>
+                    <p>Agile Scrum, maquettage Figma, conduite de projet en autonomie, travail en équipe</p>
                 </div>
             </div>
 
